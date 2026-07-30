@@ -1,24 +1,50 @@
+import { useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
+import { WelcomeGate } from "@/components/herpage/WelcomeGate";
+import { MusicPlayer } from "@/components/herpage/MusicPlayer";
+import { Hero } from "@/components/herpage/Hero";
+import { LoveLetter } from "@/components/herpage/LoveLetter";
+import { Appreciation } from "@/components/herpage/Appreciation";
+import { MemorySection } from "@/components/herpage/MemorySection";
+import { Gallery } from "@/components/herpage/Gallery";
+import { LittleThings } from "@/components/herpage/LittleThings";
+import { FinalLetter, Footer } from "@/components/herpage/FinalLetter";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
 export const Route = createFileRoute("/")({
-  component: Index,
+  head: () => ({
+    meta: [
+      { title: "A HerPage for Jaygram | More than a gift, a memory" },
+      {
+        name: "description",
+        content:
+          "A handcrafted keepsake page for Jaygram, written by his sister. Letters, memories, photographs and a song, all in one place.",
+      },
+      { property: "og:title", content: "A HerPage for Jaygram" },
+      {
+        property: "og:description",
+        content:
+          "More than a gift, a memory. A keepsake page of letters, photographs and appreciation for Jaygram.",
+      },
+    ],
+  }),
+  component: HerPage,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
-function Index() {
+function HerPage() {
+  const [started, setStarted] = useState(false);
+
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
+    <main className="relative">
+      <WelcomeGate onOpen={() => setStarted(true)} />
+      <MusicPlayer started={started} />
+      <Hero />
+      <LoveLetter />
+      <Appreciation />
+      <MemorySection />
+      <Gallery />
+      <LittleThings />
+      <FinalLetter />
+      <Footer />
+    </main>
   );
 }
