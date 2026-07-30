@@ -1,15 +1,14 @@
-import photoTie from "@/assets/IMG-20260730-WA0032.jpg.asset.json";
-import photoStreet from "@/assets/IMG-20260730-WA0039.jpg.asset.json";
-import photoHoodie from "@/assets/IMG-20260730-WA0041.jpg.asset.json";
-import clipOne from "@/assets/VID-20260730-WA0037.mp4.asset.json";
-import clipTwo from "@/assets/VID-20260730-WA0035-2.mp4.asset.json";
-import song from "@/assets/5ive_-_Me_And_My_Brother_mp3.pm.mp3.asset.json";
-
+import photoTie from "@/assets/IMG-20260730-WA0032.jpg";
+import photoStreet from "@/assets/IMG-20260730-WA0039.jpg";
+import photoHoodie from "@/assets/IMG-20260730-WA0041.jpg";
+import clipOne from "@/assets/VID-20260730-WA0037.mp4";
+import clipTwo from "@/assets/VID-20260730-WA0035-2.mp4";
+import song from "@/assets/5ive_-_Me_And_My_Brother_mp3.pm.mp3";
 export const media = {
-  hero: photoStreet.url,
-  portrait: photoHoodie.url,
-  llb: photoTie.url,
-  song: song.url,
+  hero: photoStreet,
+portrait: photoHoodie,
+llb: photoTie,
+song: song,
 };
 
 export type GalleryItem = {
@@ -21,31 +20,31 @@ export type GalleryItem = {
 
 export const gallery: GalleryItem[] = [
   {
-    src: photoStreet.url,
+    src: photoStreet,
     type: "image",
     caption: "Standing exactly the way you always stand, calm and sure of yourself",
     span: "tall",
   },
   {
-    src: photoTie.url,
+    src: photoTie,
     type: "image",
     caption: "LLB days, back when the world was still learning your name",
     span: "short",
   },
   {
-    src: clipOne.url,
+    src: clipOne,
     type: "video",
     caption: "A little moving piece of you, the kind of thing I keep going back to",
     span: "tall",
   },
   {
-    src: photoHoodie.url,
+    src: photoHoodie,
     type: "image",
     caption: "Somewhere in the middle of an ordinary day, which is where most of my favourite memories live",
     span: "short",
   },
   {
-    src: clipTwo.url,
+    src: clipTwo,
     type: "video",
     caption: "Proof that you love enjoyment, and that you let the rest of us enjoy it with you",
     span: "tall",
