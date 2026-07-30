@@ -87,8 +87,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "twitter:site", content: "@Lovable" },
       { name: "twitter:title", content: "A HerPage for Jaygram | More than a gift, a memory" },
       { name: "twitter:description", content: "A handcrafted keepsake page for Jaygram, written by his sister. Letters, memories, photographs and a song, all in one place." },
-      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/79f19d19-6323-4429-8893-fbb64fa8fdb9" },
-      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/79f19d19-6323-4429-8893-fbb64fa8fdb9" },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/fad8e9c8-cc46-49d0-b326-a869bd6db95a/id-preview-9e31bbda--8fc4896b-7067-4272-ab1e-0e807d7d21f8.lovable.app-1785433452444.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/fad8e9c8-cc46-49d0-b326-a869bd6db95a/id-preview-9e31bbda--8fc4896b-7067-4272-ab1e-0e807d7d21f8.lovable.app-1785433452444.png" },
     ],
     links: [
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
