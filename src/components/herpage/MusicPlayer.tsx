@@ -62,8 +62,11 @@ export function MusicPlayer({ started }: { started: boolean }) {
         loop
         preload="auto"
         onTimeUpdate={(e) => setTime(e.currentTarget.currentTime)}
+        onDurationChange={(e) => setDur(e.currentTarget.duration)}
+        onCanPlay={(e) => setDur(e.currentTarget.duration)}
         onLoadedMetadata={(e) => setDur(e.currentTarget.duration)}
       />
+
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
