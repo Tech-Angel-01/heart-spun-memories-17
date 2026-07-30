@@ -19,11 +19,11 @@ export const Route = createFileRoute("/")({
         content:
           "A handcrafted keepsake page for Jaygram, written by his sister. Letters, memories, photographs and a song, all in one place.",
       },
-      { property: "og:title", content: "A HerPage for Jaygram" },
+      { property: "og:title", content: "A HerPage for Jaygram | More than a gift, a memory" },
       {
         property: "og:description",
         content:
-          "More than a gift, a memory. A keepsake page of letters, photographs and appreciation for Jaygram.",
+          "A handcrafted keepsake page for Jaygram, written by his sister. Letters, memories, photographs and a song, all in one place.",
       },
     ],
   }),
